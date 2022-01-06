@@ -37,4 +37,4 @@ jobs:
         remove-old: true
     
     - name: Check Hash
-      run: echo ${{ steps.uploadtopinata.output.HASH }}
+      run: echo ${{ steps.uploadtopinata.outputs.hash }}
