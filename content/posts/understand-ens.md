@@ -1,9 +1,9 @@
 ---
 title: "Understand ENS"
 date: 2022-01-05T16:03:27Z
-draft: true
+draft: false
 ---
-# What is ENS - Ethereum Naming Service
+# What is ENS - Ethereum Naming Service <!--more-->
 ## ENS in a nutshell
 ENS : universal nickname for all the user public addresses and decentralised websites.
 

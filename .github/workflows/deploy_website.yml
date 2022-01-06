@@ -1,0 +1,36 @@
+name: Deploy Hugo Static website to IPFS / Pinata
+
+on: workflow_dispatch # Manually trigger the pipeline
+
+jobs:
+  buildAndDeploy:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true # Fetch Hugo theme in ./themes folder
+        fetch-depth: 0
+
+    - name: Setup Hugo on runner
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+     
+    - name: Build 
+      run : hugo --theme=hugo-casper3
+
+    - name: IPFS Pinata deploy GitHub action
+      uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.3
+      with:
+        pin-name: 'My personal site'
+        path: './public'
+        pinata-api-key: ${{ secrets.PINATA_API_KEY }}
+        pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }}
+        verbose: true
+        remove-old: true

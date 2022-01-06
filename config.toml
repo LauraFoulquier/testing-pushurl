@@ -1,4 +1,6 @@
-baseURL = 'http://example.org/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'From Software Engineering to Decentralised Magic'
 theme = "hugo-casper3"
+relativeURLS=true
+
