@@ -33,8 +33,8 @@ jobs:
         path: './public'
         pinata-api-key: ${{ secrets.PINATA_API_KEY }}
         pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET }}
-        verbose: true
+        verbose: false
         remove-old: true
     
     - name: Check Hash
-      run: echo ${{ steps.uploadtopinata.output.hash }}
+      run: echo ${{ steps.uploadtopinata.output.HASH }}
