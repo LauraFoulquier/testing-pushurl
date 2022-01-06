@@ -16,6 +16,10 @@ At first glance, the steps are:
 - Build hugo website
 - Upload `public` folder (resulting from the `build` action) to Pinata directly (yes I do want the website to be accessible straight away)
 
+>NB: It WORKED ! At the time of writing, the url is : https://gateway.pinata.cloud/ipfs/QmUkDw96Pa472EH9WMS6xtCQB8VmmALuVzGWwXMEZ1RJbi/
+  
+Right, but now is the catch: if I update the contents and push it automatically via my workflow, the content identifier (CID) from my pin will change. However, I want followers to be able to find my site at any time. So lets investigate how to do that.
+
 ## Gateway, DNS and all the rest
 
 ## Continuous deployment
