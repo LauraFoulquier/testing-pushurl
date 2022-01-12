@@ -1,0 +1,15 @@
+name: test
+
+on: workflow_dispatch # Manually trigger the pipeline
+
+jobs:
+  buildAndDeploy:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps: 
+    - name: Echo
+      run: echo "Hello World"
