@@ -34,6 +34,7 @@ Right, but now is the catch: if I update the contents and push it automatically 
 ### 1st try
 By looking more into gateways, at the moment, I am good to use the pinata one `https://gateway.pinata.cloud/ipfs`. 
 > First error: I can retrieve this info from any public gateway (cloudflare-ipds.com, ipfs.io etc ... just much slower). Wow, this is cool !
+IPFS Gateways are third-party nodes that fetch content from the IPFS network and serve it over HTTPS. 
 
 Looking at the output from the Pinata deploy Task, I can identify the `HASH/CID` of the newly uploaded folder that makes the full URL of the decentralised website:
 ```
@@ -67,6 +68,9 @@ Right, so I have the inputs I need. Now I need to understand what is a DNS and h
 
 ### Resources
 https://docs.ipfs.io/concepts/dnslink/#publish-content-path
+https://blog.cloudflare.com/distributed-web-gateway/
+https://developers.cloudflare.com/distributed-web/ipfs-gateway
+
 
 ## Continuous deployment
 https://withblue.ink/2019/03/20/hugo-and-ipfs-how-this-blog-works-and-scales.html
